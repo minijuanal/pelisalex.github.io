@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacto - Tienda INC</title>
+    <link rel="stylesheet" href="estilocontac.css">
+</head>
+
+
+<body>
+    <header>
+        <div class="top-bar">
+            <a href="iniciarsesion.html">Iniciar sesión</a>
+            <a href="registrate.html">Registrarse</a>
+        </div>
+        <h1>Contacto</h1>
+        <nav>
+            <ul>
+                <li><a href="index proyecto.html">Inicio</a></li>
+                <li><a href="productos proyecto.html">Productos</a></li>
+                <li><a href="carrito proyecto.html">Carrito</a></li>
+                <li><a href="contacto proyecto.html">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main class="formulario-contacto">
+        <h2>Formulario de Contacto</h2>
+        <form action="enviar.php" method="post">
+            <label for="nombre">Nombre:</label>
+            <input type="text" id="nombre" name="nombre" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="phone">Teléfono:</label>
+            <input type="phone" id="phone" name="phone" placeholder="684-365-579" pattern="[0-9]{3}-[0-9]{3}-[0-9]{3}" required><br><br>
+
+            <label for="url">Dirección:</label>
+            <input type="text" id="url" name="url" required><br><br>
+
+            <label for="mensaje">Mensaje:</label>
+            <textarea id="mensaje" name="mensaje" required></textarea>
+
+            <input type="submit" value="Enviar">
+        </form>
+    </main>
+    <footer>
+        <p>&copy; 2023 Tienda INC </p>
+        <ul>
+            <li><a href="https://www.instagram.com/">Instagram</a></li>
+            <li><a href="tel:+34 685268749">Tel: +34 685268749</a></li>
+            <li><a href="direccion">Dirección e-mail: tiendainc@gmail.com </a></li>
+          </ul>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carrito de Compras - Tienda INC</title>
+    <link rel="stylesheet" href="estilocarr.css">
+</head>
+
+
+<body>
+    <header>
+        <div class="top-bar">
+            <a href="iniciarsesion.html">Iniciar sesión</a>
+            <a href="registrate.html">Registrarse</a>
+        </div>
+        <h1>Carrito de Compras</h1>
+        <nav>
+            <ul>
+                <li><a href="index proyecto.html">Inicio</a></li>
+                <li><a href="productos proyecto.html">Productos</a></li>
+                <li><a href="carrito proyecto.html">Carrito</a></li>
+                <li><a href="contacto proyecto.html">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section class="carrito">
+            <h2>Tu Carrito de Compras</h2>
+    
+    <table border="1">
+        <thead>
+          <tr>
+            <th>Producto</th>
+            <th>Precio por unidad</th>
+            <th>Cantidad</th>
+            <th>Total</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>SUDADERA ELÁSTICA CAPUCHA</td>
+            <td>20,00€</td>
+            <td><input type="number" class="cantidad" value="1" onchange="calcularTotal(this)"></td>
+            <td class="subtotal">20,00</td>
+          </tr>
+          <tr>
+            <td>SUDADERA FELPA VERDE</td>
+            <td>30,00€</td>
+            <td><input type="number" class="cantidad" value="1" onchange="calcularTotal(this)"></td>
+            <td class="subtotal">30,00</td>
+          </tr>
+          <tr>
+            <td>SUDADERA FELPA CAPUCHA</td>
+            <td>35,00€</td>
+            <td><input type="number" class="cantidad" value="1" onchange="calcularTotal(this)"></td>
+            <td class="subtotal">35,00</td>
+          </tr>
+          <tr>
+            <td>CAMISETA 100% ALGODÓN CUELLO REDONDO</td>
+            <td>15,00€</td>
+            <td><input type="number" class="cantidad" value="1" onchange="calcularTotal(this)"></td>
+            <td class="subtotal">15,00</td>
+          </tr>
+          <tr>
+            <td>CAMISETA COLOR BLANCO CUELLO REDONDO</td>
+            <td>16,00€</td>
+            <td><input type="number" class="cantidad" value="1" onchange="calcularTotal(this)"></td>
+            <td class="subtotal">16,00</td>
+          </tr>
+          <tr>
+            <td>CAMISETA ALGODÓN CUELLO REDONDO</td>
+            <td>23,00€</td>
+            <td><input type="number" class="cantidad" value="1" onchange="calcularTotal(this)"></td>
+            <td class="subtotal">23,00</td>
+          </tr>
+          <tr>
+            <td>VAQUERO GRIS CORTE RECTO</td>
+            <td>53,00€</td>
+            <td><input type="number" class="cantidad" value="1" onchange="calcularTotal(this)"></td>
+            <td class="subtotal">53,00</td>
+          </tr>
+          <tr>
+            <td>VAQUERO AZUL CORTE RECTO TOBILLERO</td>
+            <td>25,00€</td>
+            <td><input type="number" class="cantidad" value="1" onchange="calcularTotal(this)"></td>
+            <td class="subtotal">25,00</td>
+          </tr>
+          <tr>
+            <td>PANTALÓN VAQUERO ELÁSTICO</td>
+            <td>49,00€</td>
+            <td><input type="number" class="cantidad" value="1" onchange="calcularTotal(this)"></td>
+            <td class="subtotal">49,00</td>
+          </tr>
+          <tr>
+            <td>ZAPATILLAS BLANCAS</td>
+            <td>60,00€</td>
+            <td><input type="number" class="cantidad" value="1" onchange="calcularTotal(this)"></td>
+            <td class="subtotal">60,00</td>
+          </tr>
+          <tr>
+            <td>ZAPATILLAS NEGRAS</td>
+            <td>80,00€</td>
+            <td><input type="number" class="cantidad" value="1" onchange="calcularTotal(this)"></td>
+            <td class="subtotal">80,00</td>
+          </tr>
+          <tr>
+            <td>ZAPATILLAS GRISES</td>
+            <td>79,00€</td>
+            <td><input type="number" class="cantidad" value="1" onchange="calcularTotal(this)"></td>
+            <td class="subtotal">79,00</td>
+          </tr>
+         
+        </tbody>
+        <tfoot>
+          <tr>
+            <td colspan="3">Total</td>
+            <td id="total">485</td>
+          </tr>
+        </tfoot>
+      </table>
+    </section>
+
+    
+      <script>
+        function calcularTotal(input) {
+          var fila = input.parentNode.parentNode;
+          var precio = parseFloat(fila.cells[1].innerHTML);
+          var cantidad = parseInt(input.value);
+          var subtotal = precio * cantidad;
+          fila.getElementsByClassName('subtotal')[0].innerHTML = subtotal;
+    
+          var total = 0;
+          var subtotales = document.getElementsByClassName('subtotal');
+          for (var i = 0; i < subtotales.length; i++) {
+            total += parseFloat(subtotales[i].innerHTML);
+          }
+          document.getElementById('total').innerHTML = total;
+        }
+      </script>
+
+
+    <footer>
+        <p>&copy; 2023 Tienda en Línea</p>
+        <ul>
+          <li><a href="https://www.instagram.com/">Instagram</a></li>
+          <li><a href="tel:+34 685268749">Tel: +34 685268749</a></li>
+          <li><a href="direccion">Dirección e-mail: tiendainc@gmail.com </a></li>
+        </ul>
+    </footer>
+</body>
+</html>
